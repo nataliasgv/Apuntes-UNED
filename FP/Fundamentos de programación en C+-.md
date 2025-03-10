@@ -21,7 +21,7 @@ La máquina programable por excelencia es el computador. Un computador se define
 Un computador, pose unos elementos fijos (máquina base) y otros modificables (programa). De forma simplificada podemos asociar los elementos fijos a los dispositivos físicos del computador, que constituyen el hardware, y los elementos modificables a las representaciones de los programas en sentido amplio, que constituyen el software.
 
 Los computadores actuales corresponden a un tipo particular de máquinas programables que se denominan _máquinas de programa almacenado_. En estas máquinas la modificación del programa no implica un cambio de componentes físicos de la máquina, sino que estas máquinas poseen una memoria en la cual se puede almacenar información de cualquier tipo.
-![[Pasted image 20241129191832.png]]
+![](img/Pasted%20image%2020241129191832.png)
 ## **1.2 Programación e ingeniería de software**
 
 Para realizar un determinado tratamiento de información con ayuda de un computador habrá sido necesario:
@@ -77,13 +77,13 @@ Por ejemplo, la operación de suma de números enteros es una función en que el
 El proceso de cómputo llamado reducción, se basa en reemplazar progresivamente cada función por el resultado de la misma. Este sistema de evaluación por sustitución es la base del llamado cálculo-λ.
 
 Cuando en un cómputo intervienen funciones definidas, la evaluación se sigue haciendo por sustitución. El proceso, llamado reescritura, consiste en reemplazar una función por su definición, sustituyendo los argumentos simbólicos en la definición por los argumentos reales en el cómputo.
-![[Pasted image 20241203154602.png]]
+![](img/Pasted%20image%2020241203154602.png)
 ### **1.5.2 Modelo de flujo de datos**
 
 En este modelo de cómputo, un programa corresponde a una red de operadores interconectados entre sí. Cada operador lo representaremos gráficamente mediante un cuadrado con entradas y salidas, y dentro de él el símbolo de la operación que realiza. Un operador espera hasta tener valores presentes en sus entradas, y entonces se activa él solo, consume los valores en las entradas, calcula el resultado, y lo envía a la salida. Después de esto vuelve a esperar que le lleguen nuevos valores por las entradas.
-![[Pasted image 20241203154624.png]]
+![](img/Pasted%20image%2020241203154624.png)
 Una red de flujo de datos puede organizarse de manera que opere de forma iterativa, obteniendo no ya un resultado sino una serie de ellos. Por ejemplo, la red de la figura 1.13 produce la serie de números naturales, a base de reciclar sobre sí mismo un operador de incremento.
-![[Pasted image 20241203154632.png]]
+![](img/Pasted%20image%2020241203154632.png)
 ### **1.5.3 Modelo de programación lógica**
 
 Este modelo abstracto de cómputo corresponde plenamente a lo que se denomina programación declarativa. Un programa consiste en plantear de manera formal un problema a base de declarar una serie de elementos conocidos, y luego preguntar por un resultado, dejando que sea la propia máquina la que decida cómo obtenerlo. En programación lógica los elementos conocidos que pueden declararse son hechos y reglas. Un hecho es una relación entre objetos concretos. Una regla es una relación general entre objetos que cumplen ciertas propiedades. Una relación entre objetos la escribiremos poniendo el nombre de dicha relación y luego los objetos relacionados entre paréntesis. Por ejemplo: Hijo( Juan, Luis) significaría que Juan es hijo de Luis.
@@ -255,7 +255,7 @@ En el lenguaje C± hay cuatro tipos de datos predefinidos, que se designan con l
 ### **2.5.1 El tipo entero (_int_)**
 
 Los valores de este tipo son los valores numéricos enteros positivos y negativos. Como tipo abstracto su definición coincide con el concepto matemático de los números enteros. Sin embargo, dado el carácter físico de los computadores, el rango de valores nunca podrá ser infinito como se establece en el concepto matemático. En cada caso el rango de valores del tipo int depende de la plataforma (combinación de: procesador, sistema operativo y compilador) que se esté utilizando. En general se corresponde con el rango de valores que pueden manipularse con instrucciones básicas del lenguaje de máquina y viene a ser simétrico en torno al valor cero. Dentro de dicho rango la representación de cualquier valor es exacta. Son rangos comunes los siguientes:
-![[Pasted image 20241203154848.png]]
+![](img/Pasted%20image%2020241203154848.png)
 Estos rangos obedecen a que los computadores suelen emplear la codificación en base 2 de los valores enteros. Para el signo del número se utiliza un bit, quedando, por tanto, 15, 31 ó 63 para el valor absoluto:
 
 2^15= 32.768
@@ -285,13 +285,13 @@ Asociadas al tipo int están las operaciones que se pueden realizar con los valo
 ### **2.5.2 El tipo real (_float_)**
 
 Con el tipo float se trata de representar en el computador los valores numéricos reales positivos y negativos. Sin embargo, al contrario que en caso del tipo int, esta representación puede no ser exacta. Además, dado que la capacidad de los computadores es limitada, la representación sólo se puede considerar válida dentro de un rango, de forma semejante a como sucede con los enteros.
-![[Pasted image 20241203155105.png]]
+![](img/Pasted%20image%2020241203155105.png)
 Asociadas al tipo float están las operaciones que se pueden realizar con él. Las operaciones entre valores reales son las operaciones aritméticas básicas que se realizan entre reales y devuelven como resultado valores reales.
 
 ### **2.5.3 El tipo carácter (char)**
 
 Para comprender bien el manejo de valores de tipo carácter en un computador es necesario conocer cómo se definen y representan esos valores de caracteres. Cada carácter no se representa internamente como un dibujo (el glifo del carácter), sino como un valor numérico entero que es su código. La colección concreta de caracteres y sus códigos numéricos se establecen en una tabla (charset) que asocia a cada carácter el código numérico (codepoint) que le corresponde. Dependiendo del número de bits reservado para representar el código de cada carácter podremos tener tablas más o menos amplias. Algunas tablas de caracteres de amplio uso son:
-![[Pasted image 20241203155119.png]]
+![](img/Pasted%20image%2020241203155119.png)
 Las tablas mencionadas son compatibles entre sí en el sentido de que cada una de ellas incluye la anterior, manteniendo los códigos numéricos de los caracteres. Lamentablemente la compatibilidad no se extiende a otras muchas labias de caracteres de amplio uso.
 
 En C+- (como en C/ C++) los valores del tipo char ocupan 8 bits e incluyen el repertorio ASCII. Además incluyen otros caracteres no-ASCII que dependen de la tabla de caracteres establecida . En los ejemplos de este libro asumiremos que se dispone de los caracteres comunes a Latin-l y Windows-1252. Por lo tanto, la colección de valores del tipo char incluye caracteres alfabéticos, numéricos, de puntuación y caracteres de control.
@@ -323,7 +323,7 @@ Además, conviene saber que la tabla ASCII posee las siguientes características
 • Los caracteres correspondientes a los dígitos del 'O' al '9' están ordenados en posiciones consecutivas y crecientes.
 
 En C (y en C±) se puede usar también el módulo de librería ctype (cabecera «ctype .h» , que facilita el manejo de diferentes clases de caracteres. Este módulo incluye funciones tales como:
-![[Pasted image 20241203155200.png]]
+![](img/Pasted%20image%2020241203155200.png)
 ## **2.6 Expresiones aritméticas**
 
 Una expresión aritmética representa un cálculo a realizar con valores numéricos (más adelante se verán expresiones que utilizan también valores de otros tipos). Una expresión aritmética es una combinación de operandos y operadores.
@@ -361,13 +361,13 @@ Si lo que se quiere escribir es la representación como texto de una serie de va
 printf( cadena-con-formatos, valor1, valor2, …, valorN );
 
 Una cadena de caracteres con formatos deberá incluir en su interior una especificación de formato por cada valor que se quiera insertar. La forma más simple de especificar un formato es mediante %x, es decir, usando el carácter fijo % seguido de una letra de código que indica el tipo de formato a aplicar.
-![[Pasted image 20241203155220.png]]
+![](img/Pasted%20image%2020241203155220.png)
 Como se puede apreciar en los ejemplos estos formatos simples usan sólo el número de caracteres estrictamente necesarios para escribir el valor de cada dato, sin añadir espacios en blanco. Si se quiere separar con espacios unos valores de otros, entonces hay que incluirlos en el formato.
 
 Otra forma de conseguir espacios en los resultados es indicar explícitamente cuántos caracteres debe ocupar el valor de cada dato escrito. Esto se hace poniendo el número de caracteres entre el símbolo de % y el código del formato.
-![[Pasted image 20241203155232.png]]
+![](img/Pasted%20image%2020241203155232.png)
 Cuando el número de caracteres indicado es insuficiente para representar completamente el valor, como ocurre en el último ejemplo, se utilizan tantos caracteres como sean necesarios para que el resultado aparezca completo. Además, cuando se utiliza un formato f , e ó g se puede especificar también el número de cifras decimales que se deben escribir después del punto decimal.
-![[Pasted image 20241203155242.png]]
+![](img/Pasted%20image%2020241203155242.png)
 ## **2.8 Estructura de un programa completo**
 
 Un programa en C± se engloba dentro de una estructura principal o main().
@@ -659,7 +659,7 @@ Al igual que en el procedimiento printf, la cadena con los formatos puede inclui
 4. ==Un carácter no blanco en la cadena con formatos hace que se lea (y se salte) el siguiente carácter de la entrada, que debe coincidir exactamente con el carácter del formato.==
 
 ==Si alguna de las acciones anteriores no puede realizarse, porque el texto de entrada no contiene los caracteres apropiados, la ejecución de scanf se interrumpe en ese momento, y no se lee más texto de entrada ni se asignan valores a las variables que falten por leer.== Los formatos de conversión numéricos pueden incluir la especificación del tamaño del dato, de forma similar a como se dijo para printf. ==Pero a diferencia de los formatos para printf, en que ese tamaño era el mínimo número de caracteres a escribir, en scanf significa el tamaño máximo del dato de entrada a leer.== Ej:
-![[Pasted image 20241203160306.png]]
+![](img/Pasted%20image%2020241203160306.png)
 ### **3.6.2 Lectura interactiva**
 
 Cuando un programa se comunica con el usuario mediante un terminal de texto se suele programar cada operación de lectura inmediatamente después de una escritura en la que se indica qué dato es el que se solicita en cada momento. Por ejemplo:
@@ -827,7 +827,7 @@ El estilo de redacción del programa en su forma final es algo fundamental para 
 ### **4.4.1 Encolumnado**
 
 Un recurso de estilo de presentación es el _encolumnado_ o sangrado (_indent_). Ampliando el margen izquierdo para las partes internas del programa se puede conseguir que el texto de un elemento compuesto ocupe una zona aproximadamente rectangular, y que el texto que representa cada uno de sus componentes ocupe también una zona rectangular dentro de ella.
-![[Pasted image 20241203160521.png]]
+![](img/Pasted%20image%2020241203160521.png)
 ### **4.4.2 Comentarios. Documentación del refinamiento**
 
 Aunque el lenguaje permite empicar comentarios con toda libertad, es aconsejable seguir ciertas pautas para facilitar la lectura del programa. Estas pautas corresponden a diferentes clases de comentarios, cada una con un propósito diferente. Entre ellas podemos mencionar:
@@ -835,21 +835,21 @@ Aunque el lenguaje permite empicar comentarios con toda libertad, es aconsejable
 • Cabeceras de programa
 
 ==La cabecera de programa tiene como finalidad documentar el programa como un todo.== Puede incluir datos de identificación, finalidad, descripción general, etc. Suele presentarse como una "caja" al comienzo del texto del programa, ocupando todo el ancho del listado.
-![[Pasted image 20241203160539.png]]
+![](img/Pasted%20image%2020241203160539.png)
 • Cabeceras de sección
 
 ==Las cabeceras de sección sirven para documentar partes importantes de un programa relativamente largo.== Al igual que la cabecera del programa, se presentan en forma de "caja" al comienzo de la sección correspondientes, ocupando todo el ancho del listado.
-![[Pasted image 20241203160610.png]]
+![](img/Pasted%20image%20Pasted image 20241203160610.png)
 • Comentarios-orden
 
 Los comentarios-orden son un elemento metodológico fundamental, y sirven para documentar los refinamientos empleados en el desarrollo del programa.
 
 Para incluir la información de los pasos de refinamiento en el texto del programa se puede introducir un comentario con la descripción de cada acción intermedia.
-![[Pasted image 20241203160621.png]]
+![](img/Pasted%20image%2020241203160621.png)
 • Comentarios al margen
 
 Estos comentarios sirven para aclarar el significado de ciertas sentencias del programa, que pueden ser difíciles de interpretar al leerlas tal como aparecen escritas en el lenguaje de programación empleado. Ulla recomendación de estilo es situar estos comentarios hacia la parte derecha del listado, en las mismas líneas que las sentencias que se comentan, y alineados todos a partir de una posición fija, hacia el comienzo del tercio final.
-![[Pasted image 20241203160633.png]]
+![](img/Pasted%20image%2020241203160633.png)
 ### **4.4.3 Elección de nombres**
 
 Los nombres que tenga que inventar el programador deben ser elegidos con un criterio nemotécnico, de manera que recuerden fácilmente el significado de los elementos nombrados.
@@ -883,23 +883,23 @@ Esta metodología está basada en la técnica de desarrollo de programas por _re
 ### **5.1.1 Representación de la estructura de un programa**
 
 La estructura de los programas imperativos se representa tradicionalmente mediante _diagramas de flujo_, llamados en inglés "flow-chart". Estos diagramas contienen dos elementos básicos, correspondientes a acciones y condiciones. Las acciones se representan mediante rectángulos, y las condiciones mediante rombos. Las condiciones equivalen a preguntas a las que se puede responder “SÍ" o “No".
-![[Pasted image 20241203160747.png]]
+![](img/Pasted%20image%2020241203160747.png)
 El flujo de control durante la ejecución del programa se refleja mediante líneas o vías que van de un elemento a otro. Durante la ejecución, cuando el flujo llega a la entrada de una acción, la acción se realiza y el flujo se dirige a su salida. Cuando se llega a la entrada de una condición, la condición se evalúa, y si resulta ser cierta se continúa por la salida "SÍ", mientras que si es falsa se continúa por la salida "No".
 
 La parte de diagrama de flujo en el interior de una acción compuesta constituye la estructura o esquema de dicha acción. La programación estructurada recomienda descomponer las acciones usando las estructuras más sencillas posibles. Entre ellas se reconocen tres estructuras básicas, que son: _Secuencia, Selección e Iteración._
-![[Pasted image 20241203160757.png]]
+![](img/Pasted%20image%2020241203160757.png)
 ### **5.1.2 Secuencia**
 
 La estructura más sencilla para emplear en la descomposición es utilizar una secuencia de acciones o partes que se ejecutan de forma sucesiva.
-![[Pasted image 20241203160807.png]]
+![](img/Pasted%20image%2020241203160807.png)
 ### **5.1.3 Selección**
 
 La estructura de selección consiste en ejecutar una acción u otra, dependiendo de una determinada condición que se analiza a la entrada de la estructura.
-![[Pasted image 20241203160816.png]]
+![](img/Pasted%20image%2020241203160816.png)
 ### **5.1.4 Iteración**
 
 La iteración es la repetición de una acción mientras que se cumpla una determinada condición. La estructura de iteración más general es aquella en que la condición se analiza a la entrada de la estructura y antes de iniciar cada nueva repetición. Puesto que el flujo de ejecución vuelve hacia atrás siguiendo un camino cerrado, la estructura de iteración se denomina también bucle.
-![[Pasted image 20241203160825.png]]
+![](img/Pasted%20image%2020241203160825.png)
 ### **5.1.5 Estructuras anidadas**
 
 Mediante la técnica de refinamientos sucesivos se definen inicialmente las estructuras más externas del programa y en los pasos sucesivos se va detallando la. estructura de cada acción compuesta. Este proceso finalmente da lugar a que todo el programa quede escrito utilizando las estructuras básicas descritas en este apartado, anidadas unas dentro de otras.
@@ -907,9 +907,9 @@ Mediante la técnica de refinamientos sucesivos se definen inicialmente las estr
 ## **5.2 Expresiones condicionales**
 
 Una primera forma de construir expresiones condicionales es mediante el empleo de operadores de comparación en expresiones aritméticas. Estos operadores permiten realizar comparaciones entre dos valores del mismo tipo.
-![[Pasted image 20241203160854.png]]
+![](img/Pasted%20image%2020241203160854.png)
 Las condiciones compuestas se construyen como expresiones lógicas. Cada término de una expresión lógica podrá ser una expresión condicional simple.
-![[Pasted image 20241203160900.png]]
+![](img/Pasted%20image%2020241203160900.png)
 La operación de conjunción El && E2 da resultado cierto si tanto El como E2 son ciertos. En el lenguaje C± para evaluar la operación de conjunción && siempre se empieza por evaluar la expresión simple El del primer operando y si su resultado es falso ya no se evalúa la expresión E2 del segundo operando.
 
 ==Está claro que el resultado de la conjunción ya no depende del valor de E2 y será siempre falso. Por este motivo se dice que el operador && se evalúa en _cortocircuito_.
@@ -919,11 +919,11 @@ La operación de disyunción El I I E2 da resultado cierto si una de las dos, El
 La complejidad de las expresiones puede ser tan grande como sea necesario; el número de términos lógicos que pueden combinarse es ilimitado. Además, cada valor numérico se puede obtener mediante una expresión aritmética.
 
 Cada operador tiene una prioridad determinada. Si no se utilizan paréntesis, el orden de evaluación en el lenguaje C± es el siguiente:
-![[Pasted image 20241203160933.png]]
+![](img/Pasted%20image%2020241203160933.png)
 Dentro del mismo nivel de prioridad las operaciones se evalúan en el orden en que están escritas en cada expresión concreta, de izquierda a derecha.
 
 Para formalizar estos conceptos, las reglas BNF que definen cómo se pueden escribir expresiones aritméticas, condicionales y lógicas en el lenguaje C± son las siguientes:
-![[Pasted image 20241203160945.png]]
+![](img/Pasted%20image%2020241203160945.png)
 RESUMEN:
 
 ==2.      Es aconsejable utilizar paréntesis adicionales para evitar cualquier ambigüedad o dificultad de interpretación de la expresión.
@@ -943,11 +943,11 @@ RESUMEN:
 Para programar una secuencia de acciones en C± se escriben las sentencias que forman la secuencia de acciones una tras otra.
 
 Formalmente, según se vio en el tema 2, la sintaxis de la estructura secuencia es:
-![[Pasted image 20241203161028.png]]
+![](img/Pasted%20image%2020241203161028.png)
 ### **5.3.2 Sentencia IF**
 
 La ejecución de la sentencia if consiste en evaluar la expresión de Condición, y a continuación ejecutar o bien la Acción A (si se cumple la condición), o bien la Acción B (si la condición no se cumple). Las palabras clave ir y else separan las distintas partes de la sentencia.
-![[Pasted image 20241203161040.png]]
+![](img/Pasted%20image%2020241203161040.png)
 En ocasiones no es necesario ejecutar nada cuando la Condición no se cumple. En este caso se ejecuta la Acción cuando la expresión Condición se cumple y en caso contrario no se ejecuta nada.
 
 Es bastante frecuente realizar selecciones que dan lugar a más de dos posibles. Tal como se indicó anteriormente, es posible anidar varias estructuras de selección unas dentro de otras.
@@ -973,7 +973,7 @@ El formato de la sentencia if para la selección en cascada es el siguiente:
 `Acción K }`
 
 Todas las sentencias presentadas son variantes de una única sentencia IF de C+- cuya sintaxis es la siguiente:
-![[Pasted image 20241203161056.png]]
+![](img/Pasted%20image%2020241203161056.png)
 ### **5.3.3 Sentencia WHILE**
 
 While ( Condición ) {
@@ -999,8 +999,8 @@ La variable Índice sirve de contador para controlar el número de iteraciones a
 La variable Índice se declara dentro del propio FOR, y sólo existe mientras se ejecuta. Al terminar la ejecución la variable Índice ya no es visible en las siguientes sentencias del programa.
 
 la sintaxis completa de la sentencia FOR es, por tanto, la siguiente:
-![[Pasted image 20241203161125.png]]
-![[Pasted image 20241203161145.png]]
+![](img/Pasted%20image%2020241203161125.png)
+![](img/Pasted%20image%2020241203161145.png)
 # Tema 6 Metodología de Desarrollo de Programas (II)
 
 ## **6.1 Desarrollo con esquemas de selección e iteración**
@@ -1165,10 +1165,10 @@ Para analizar el comportamiento de un fragmento de programa correspondiente a un
 - La condición de que la variable tiene el valor asignado.
 
 ### **6.3.4 Razonamiento sobre el esquema de selección**
-![[Pasted image 20241203161525.png]]
+![](img/Pasted%20image%2020241203161525.png)
 
 ### **6.3.5 Razonamiento sobre el esquema de iteración: invariante, terminación.**
-![[Pasted image 20241203161543.png]]
+![](img/Pasted%20image%2020241203161543.png)
 ## **6.4 Eficiencia de programas. Complejidad**
 
 La eficiencia sólo debe tenerse en cuenta si es un factor decisivo o importante en cada caso.
@@ -1219,7 +1219,7 @@ En los análisis de eficiencia (o complejidad) se considera muy importante la ma
 La forma en que crece la función para tamaños grandes se dice que es su _comportamiento asintótico_, y se representa mediante la notación: O (f(n)) En dicha notación n indica el tamaño del problema, f la forma o función de crecimiento asintótico, y O (que se lee O-grande) significa orden de crecimiento.
 
 Algunas formas de crecimiento típicas, y sus valoraciones habituales, son las siguientes:
-![[Pasted image 20241203161922.png]]
+![](img/Pasted%20image%2020241203161922.png)
 Los problemas que sólo pueden resolverse con programas de complejidad exponencial se consideran _problemas intratables_ en la práctica para tamaños grandes.
 
 # Tema 7 Funciones y Procedimientos
@@ -1367,7 +1367,7 @@ La definición de un subprograma está formada por una cabecera o interfaz y un 
 Los elementos definidos en el ámbito más externo son _elementos globales_, mientras que los elementos definidos en el interior del bloque de un subprograma son _elementos locales_ a dicho subprograma. Los elementos locales de un bloque son invisibles desde el exterior del bloque y dejan existir al finalizar la ejecución del bloque.
 
 El contenido lógico de la interfaz es Jo que se denomina signatura del subprograma, que es suficiente para comprobar si las invocaciones son consistentes con su definición:
-![[Pasted image 20241203162329.png]]
+![](img/Pasted%20image%2020241203162329.png)
 Finalmente hay que mencionar el caso especial de la sentencia for de C±. En ella se declara la variable contador del bucle en la misma sentencia, y establece un ámbito local limitado en el cual es visible dicha variable contador. De hecho, al terminar la ejecución del bucle la variable contador desaparece.
 
 ## **7.6 Recursividad de subprogramas**
@@ -1417,7 +1417,7 @@ En C± la especificación puede ser simplemente una cabecera de subprograma. Esa
 La _especificación_ completa debe establecer también cuál es la _semántica_ o significado de la operación. Para ello podemos añadir un comentario en que se indique qué relación hay entre los argumentos y el resultado de la operación.
 
 La _realización_, por su parte, debe suministrar toda la información necesaria para poder ejecutar la operación. En C± la realización o implementación será. la definición completa del subprograma, en forma de bloque de código.
-![[Pasted image 20241203162509.png]]
+![](img/Pasted%20image%2020241203162509.png)
 Con ello se pone de manifiesto la idea de que la especificación es una visión abstracta de qué hace la función, con independencia de los detalles de cómo lo hace.
 
 ### **8.1.2 Funciones. Argumentos**
@@ -1555,9 +1555,9 @@ En estas declaraciones se definen nuevos tipos dándoles un nombre o identificad
 En algunos lenguajes de programación, tales como Pascal, Modula-2 o Ada, se puede acotar el rango de valores de un tipo de datos a partir de otro en el momento de la declaración. Lamentablemente, en C± sólo es posible acotar el rango de valores de un dato haciendo las correspondientes comprobaciones dentro del código del programa.
 
 De manera formal, la sintaxis de la declaración de tipos es la siguiente:
-![[Pasted image 20241203162921.png]]
+![](img/Pasted%20image%2020241203162921.png)
 El tipo sinónimo ya ha sido utilizado en los ejemplos anteriores para introducir el concepto de tipo de dato. Formalmente la declaración de un tipo sinónimo la siguiente:
-![[Pasted image 20241203162927.png]]
+![](img/Pasted%20image%2020241203162927.png)
 El tipo sinónimo puede parecer trivial, sin embargo, tiene una utilidad bastante importante ==como mecanismo de parametrización del programa==. Al igual que sucedía con las constantes con nombre, en un programa pueden utilizar sólo tipos con nombres propios. Por ejemplo:
 
 typedef int entero;
@@ -1573,11 +1573,11 @@ Estos nuevos tipos entero, caracter y real sustituyen a los predefinidos del len
 ### **9.2.1 Definición de tipos enumerados**
 
 Una manera sencilla de definir un nuevo tipo de dato es enumerar todos los posibles valores que puede tomar. En C± el nuevo tipo enumerado se define detrás de la palabra clave enum mediante un identificador del tipo y a continuación se detalla la lista con los valores separados por comas ( ,) y encerrados entre llaves {…}. Cada posible valor también se describe mediante un identificador. Estos identificadores al mismo tiempo quedan declarados como valores constantes.
-![[Pasted image 20241203163002.png]]
+![](img/Pasted%20image%2020241203163002.png)
 ==La enumeración implica un orden que se establece entre los valores enumerados. ==En C este orden se define de forma implícita e impone que el primer elemento de la lista ocupa la posición 0, el siguiente la 1, y así sucesivamente hasta el último, que ocupa la posición N-l, siendo N el número de elementos enumerados. Los tipos de datos enumerados forman parte de una clase de tipos de C+- denominados _tipos ordinales_, a la cual pertenecen también los tipos int y char, pero no el tipo fIoat.
 
 La sintaxis exacta de la declaración de los tipos enumerados es la siguiente:
-![[Pasted image 20241203163027.png]]
+![](img/Pasted%20image%2020241203163027.png)
 ### **9.2.2 Uso de tipos enumerados**
 
 Al igual que para el resto de los tipos ordinales, con los tipos enumerados se puede utilizar la notación int(e) para obtener la posición de un valor en la lista de valores del tipo.
@@ -1601,9 +1601,9 @@ bool bisiesto;
 bisiesto = (anno % 4) == 0;
 
 Asimismo, es posible realizar operaciones entre ellas. En concreto, entre operandos booleanos (variables o no) es posible realizar las operaciones lógicas.
-![[Pasted image 20241203163051.png]]
+![](img/Pasted%20image%2020241203163051.png)
 El tipo booleano, como cualquier otro tipo enumerado, se puede pasar como argumento de un procedimiento o función y puede ser devuelto como resultado de una función. ==De hecho, es frecuente definir funciones cuyo resultado es un valor booleano cuando se quiere realizar un test sobre los argumentos de la función. Este tipo de funciones se denominan _predicados_.==
-![[Pasted image 20241203163105.png]]
+![](img/Pasted%20image%2020241203163105.png)
 Conviene recordar que para poder usar estas funciones predicado es necesario incluir la cabecera. de librería al comienzo del programa.
 
 ## **9.4 Tipos estructurados**
@@ -1619,19 +1619,19 @@ Estas estructuras se denominan genéricamente _formaciones_ (en inglés _array_)
 ## **9.6 Tipo vector**
 
 Un vector está constituido por una serie de valores, todos ellos del mismo tipo, a los que se les da un nombre común que identifica a toda la estructura globalmente. Cada valor concreto dentro de la estructura se distingue por su índice o número de orden que ocupa en la serie.
-![[Pasted image 20241203163143.png]]
+![](img/Pasted%20image%2020241203163143.png)
 Esta estructura es análoga al concepto matemático de vector, en el que el vector completo se identifica por un nombre único y cada elemento particular mediante el correspondiente subíndice: V = (V0, V1, V2 , V3 .. .. , Vn- 2 , Vn-1)
 
 ### **9.6.1 Declaración de vectores**
 
 En C±, una estructura de tipo vector se declara de la siguiente forma:
-![[Pasted image 20241203163158.png]]
+![](img/Pasted%20image%2020241203163158.png)
 Donde _TipoVector_ es el nombre del nuevo tipo de vector que se declara y _NumeroElementos_ es un valor constante que indica el número de elementos que constituyen el vector. Por tanto, la variabilidad del índice de un vector siempre estará comprendida entre 0 y _NumeroElementos_ -1. Finalmente, _TipoElemento_ corresponde al tipo de dato de cada uno de los elementos del vector y puede ser cualquier tipo de dato predefinido del lenguaje o definido por el programador.
 
 En muchos casos el tamaño del vector es un parámetro del programa que podría tener que cambiarse al adaptarlo a nuevas necesidades. Si es así, resulta aconsejable que la declaración del número de elementos se realice como una constante con nombre.
 
 La sintaxis exacta de la declaración de los tipos formación es la siguiente:
-![[Pasted image 20241203163206.png]]
+![](img/Pasted%20image%2020241203163206.png)
 ### **9.6.2 Inicialización de un vector**
 
 En el caso de un vector la inicialización afecta a todos sus elementos y por tanto la notación es algo especial y en ella se indica el valor inicial de todos los elementos agrupándolos entre llaves { ... } y separándolos por comas (,).
@@ -1653,9 +1653,9 @@ Es especialmente importante insistir en que al usar lenguajes como C, C++ o C± 
 En lenguajes tales como Pascal, Modula-2, Ada, etc. existe la posibilidad de realizar una asignación global de un vector a otro, siempre que estos sean compatibles entre sí.
 
 Sin embargo, en C± no existe esta posibilidad y la asignación se tiene que programar explícitamente mediante un bucle que realice la copia elemento a elemento.
-![[Pasted image 20241203163229.png]]
+![](img/Pasted%20image%2020241203163229.png)
 La sintaxis completa de esta sentencia es la siguiente:
-![[Pasted image 20241203163243.png]]
+![](img/Pasted%20image%2020241203163243.png)
 ### **9.6.5 Paso de argumentos de tipo vector**
 
 Otra manera habitual de operar globalmente con los vectores es utilizarlos como argumentos de procedimientos o funciones.
@@ -1683,7 +1683,7 @@ Se considera una cadena o _string_, con independencia de su longitud particular,
 typedef char Cadena20[21];
 
 Como la utilización de cadenas de caracteres es bastante habitual, el lenguaje C (y C±) dispone de la librería string (cabecera <string.h>) que facilita el manejo de cadenas.
-![[Pasted image 20241203163333.png]]
+![](img/Pasted%20image%2020241203163333.png)
 Al igual que con cualquier otro tipo de vector, no es posible realizar asign. dones globales entre cadenas.
 
 Para realizar esta operación usando el procedimiento general se programaría un for que copie elemento a elemento tal como se ha explicado en el apartado anterior. ==Sin embargo, esta operación se puede realizar utilizando la función de librería st rcpy tal y como se muestra a continuación:==
@@ -1723,11 +1723,11 @@ Los esquemas de tupla pueden usarse en programas en C± definiéndolos como estr
 ### **9.9.1 Definición de registros**
 
 La declaración de un tipo registro en C± se hace utilizando la palabra clave struct de la siguiente la forma:
-![[Pasted image 20241203163517.png]]
+![](img/Pasted%20image%2020241203163517.png)
 Cada una de las parejas Tipo- campo y nombre-campo, separadas por punto y coma (;), define un campo o elemento componente y su correspondiente tipo. Además, hay que tener en cuenta que la estructura acaba siempre con punto y coma (;)
-![[Pasted image 20241203163525.png]]
+![](img/Pasted%20image%2020241203163525.png)
 La sintaxis de la declaración de los tipos registro es la siguiente:
-![[Pasted image 20241203163534.png]]
+![](img/Pasted%20image%2020241203163534.png)
 ### **9.9.2 Variables de tipo registro y su inicialización**
 
 Como siempre, para declarar variables de tipo registro es necesario haber inicializado previamente la definición del tipo del registro. A continuación se detalla una declaración de variables:
@@ -1763,9 +1763,9 @@ Cada campo se puede usar como cualquier otro dato del correspondiente tipo.
 ### **10.1.1 Repetición: Sentencia DO**
 
 A veces resulta más natural comprobar la condición que controla las iteraciones al finalizar cada una de ellas, en lugar de hacerlo al comienzo de las mismas. En este caso, siempre se ejecuta al menos una primera iteración.
-![[Pasted image 20241203163613.png]]
+![](img/Pasted%20image%2020241203163613.png)
 El formato de la estructura. de repetición en C± es el siguiente:
-![[Pasted image 20241203163621.png]]
+![](img/Pasted%20image%2020241203163621.png)
 La Condición que controla las repeticiones es una expresión cuyo resultado un valor de tipo bool. Si el resultado es true se vuelve a ejecutar la Acción y cuando el resultado es false finaliza la ejecución de la estructura.
 
 ### **10.1.2 Sentencia CONTINUE**
@@ -1781,13 +1781,13 @@ Cuando la selección entre varios casos alternativos depende del valor que toma 
 Si lo que se necesita es comparar el resultado de una expresión, dicha expresión se reevaluará tantas veces como comparaciones se deben realizar (a menos que disponga de un compilador optimizante).
 
 Si el tipo de valor que determina la selección es un tipo ordinal: int, char o enumerado, se dispone en C± de la sentencia switch cuya estructura permite agrupar los casos que tienen el mismo tratamiento y en la que se evalúa solamente una vez la expresión x.
-![[Pasted image 20241203163658.png]]
+![](img/Pasted%20image%2020241203163658.png)
 En la sentencia switch se deben incluir todos los posibles valores que tomar la variable o expresión. Cuando se obtiene un valor que no está asociado a ninguna vía (y no hay alternativa default), el programa finaliza por error. Si lo que sucede es que existen valores para los que no se debe realizar ninguna acción, entonces estos valores se deben declarar asociados a una acción.
 
 Otra forma de conseguir esto mismo es mediante \lila alternativa default vacía utilizando sólo un punto y coma ( ;).
 
 Para acabar este apartado se detalla la sintaxis formal de la sentencia switch do C+-:
-![[Pasted image 20241203163711.png]]
+![](img/Pasted%20image%2020241203163711.png)
 # Tema 11 Estructuras de datos
 ## 11.1 Argumentos de tipo vector abierto
 Si un subprograma debe operar con un vector recibido como argumento, necesita toda la información del tipo de dicho vector, es decir, el tipo y número de sus elementos.
@@ -1806,7 +1806,7 @@ Por supuesto, hay otras alternativas al paso explícito de la longitud del vecto
 ## 11.2 Formaciones anidadas. Matrices
 ### 11.2.1 Declaración de matrices y uso de sus elementos
 ==Las matrices son estructuras de tipo formación (array) de dos o más dimensiones. Una forma sencilla de plantear la definición de estas estructuras es considerarlas como vectores cuyos elementos son a su vez vectores (o matrices).==
-![[Pasted image 20241208222746.png]]
+![](img/Pasted%20image%2020241208222746.png)
 En la figura se presenta la matriz como un vector cuyos elementos son las filas de la matriz, que a su vez son vectores de elementos de la matriz. Usando directamente declaraciones de tipos vector podríamos escribir la declaración de una matriz de números enteros de la siguiente manera:
 ```
 const int NumFilas = 10; 
@@ -1821,7 +1821,7 @@ TipoMatriz matriz;
 matriz[3][5] = 27;
 ```
 Las reglas sintácticas de la definición de formaciones de una o varias dimensiones.
-![[Pasted image 20241208223317.png]]
+![](img/Pasted%20image%2020241208223317.png)
 ### 11.2.2 Operaciones con matrices
 Las operaciones con elementos individuales de una matriz pueden hacerse directamente, de forma análoga a la operación con variables simples de ese tipo. En cambio las operaciones globales con matrices han de plantearse de manera similar a las operaciones globales con vectores. En general habrá que operar elemento a elemento, o a lo sumo por filas completas.
 Al comienzo de este tema se ha mencionado la posibilidad de definir argumentos de tipo vector como vectores abiertos, de tamaño indefinido. Podemos pensar en generalizar ese mecanismo y permitir el uso de argumentos de tipo matriz abierta. Lamentablemente los lenguajes e o C++, y por lo tanto C+-, no lo permiten.
@@ -1829,7 +1829,7 @@ Al comienzo de este tema se ha mencionado la posibilidad de definir argumentos d
 
 ## 11.3 El esquema unión
 Hay aplicaciones en las que resultaría deseable que el tipo de un dato variase según las circunstancias. ==Si las posibilidades de variación son un conjunto finito de tipos, entonces se puede decir que el tipo del dato corresponde a un esquema que es la *unión* de los tipos particulares posibles.== Cada uno de los tipos particulares constituye una variante o alternativa del tipo unión. Representaremos simbólicamente este esquema de forma similar a las alternativas en las reglas de sintaxis BNF:
-![[Pasted image 20241208223935.png]]
+![](img/Pasted%20image%2020241208223935.png)
 ### 11.3.1 El tipo union
 Un tipo union se define como una colección de campos alternativos, de tal manera que cada dato particular sólo usará uno de esos campos en un momento dado, dependiendo de la alternativa aplicable. La definición es similar a la de un agregado o struct.
 ```
@@ -1981,7 +1981,7 @@ En los ejemplos anteriores el índice usado para controlar el bucle nos señala 
 
 ==Ejemplo: CUADRADO MÁGICO (lado impar)
 Se puede construir rellenando las casillas números correlativos, empezando por el centro de la fila superior y avanzando en diagonal hacia arriba y a la derecha. Al salir del cuadro por un lado pasa a la casilla correspondiente del lado contrario. Si la siguiente casilla en avance diagonal ya está ocupada no se avanza, sino que se desciende a la casilla inmediatamente debajo para continuar el recorrido.==
-![[Pasted image 20241213174330.png]]
+![](img/Pasted%20image%2020241213174330.png)
 ```
 const int N = ... ;
 typedef int T_Matriz[N][N] ;
@@ -2014,7 +2014,7 @@ completar operación
 ```
 ## 12.3 Inserción
 El problema que se plantea aquí es insertar un nuevo elemento en una colección de elementos ordenados, manteniendo el orden de la colección. Se supone que los elementos están almacenados en un vector, ocupando las posiciones desde el principio, y que queda algo de espacio libre al final del vector (si el vector estuviese lleno no se podrían insertar nuevos elementos).
-![[Pasted image 20241213180951.png]]
+![](img/Pasted%20image%2020241213180951.png)
 ```
 typedef ... T_Elemento ... ;
 void Insertar( T_Elemento v[], int N, T_Elemento elemento) {
@@ -2031,7 +2031,7 @@ POST : v´[0...n] está ordenado y contiene los valores v[0... N-1] más "elemen
 ```
 ## 12.4 Ordenación por inserción directa
 En este apartado se aborda una solución para la ordenación de datos almacenados en un vector. Por ejemplo, se trata de ordenar un vector v de diez elementos (índices de 0 a 9)
-![[Pasted image 20241213182132.png]]
+![](img/Pasted%20image%2020241213182132.png)
 A continuación se muestra el código de una posible realización. La variable valor guarda el elemento extraído de la posición i. La ordenación total vector se consigue mediante el recorrido de todos sus elementos, desde el segundo, para buscarles su hueco e insertarlos en él.
 ```
 typedef ... T_Elemento ...;
@@ -2177,7 +2177,7 @@ Una variable dinámica no se declara como tal, sino que se crea en el momento ne
 
 ### 13.3.1 Punteros
 En C± los punteros o referencias son variables simples cuyo contenido es precisamente una referencia a otra variable. El valor de un puntero no es representable como número o texto.
-![[Pasted image 20241217201055.png]]
+![](img/Pasted%20image%2020241217201055.png)
 El tipo de un puntero especifica en realidad el tipo de variable a la que puede apuntar. La declaración es: 
 ```
 typedef Tipo_de_variable* Tipo_puntero
@@ -2246,14 +2246,14 @@ p2 = new int;
 p2 = p1;
 ```
 
-![[Pasted image 20241217202703.png]]
+![](img/Pasted%20image%2020241217202703.png)
 ==En este caso la variable creada mediante p2 = new int; queda perdida, sin posibilidad de ser usada, ya que las variables dinámicas no tienen nombre y el único puntero que la señalaba ha cambiado su valor, perdiendo el anterior. Además el espacio ocupado por la variable dinámica sigue reservarlo, lo es totalmente inútil y representa una pérdida de la capacidad de memoria disponible (en inglés se denomina memory leak).==
 
 ## 13.4 Realización de secuencias mediante punteros
 C± no dispone de esquemas de datos de tamaño variable. Dichos esquemas pueden ser realizados indirectamente por el programador mediante el uso de punteros. 
 
 Para definir una secuencia ilimitada tendremos que recurrir al empleo de variables dinámicas y punteros. Una manera de hacerlo es usar punteros para enlazar cada elemento de la secuencia con el siguiente.
-![[Pasted image 20241217203324.png]]
+![](img/Pasted%20image%2020241217203324.png)
 ==Cada elemento de la secuencia se materializa como un registro con dos campos: el primero contiene el valor de una componente, y el segundo es un puntero que señala al siguiente. El último elemento tendrá el puntero al siguiente con valor NULL. La secuencia completa es accesible a través de un puntero que señala al comienzo de la misma.==
 ```
 typedef struct Tipo_nodo {
@@ -2432,7 +2432,7 @@ nuevo->siguiente = anterior = anterior->siguiente;   /* 2º paso */
 anterior->siguiente = nuevo;                         /* 3º paso */
 
 ```
-![[Pasted image 20241217212118.png]]
+![](img/Pasted%20image%2020241217212118.png)
 1.
 - **`int numero`**: Es un número entero que queremos asignar al nuevo nodo.
 - **`TipoPuntNodo`**: Es un alias para `TipoNodo *` (puntero a un nodo de tipo `TipoNodo`).
@@ -2471,7 +2471,7 @@ anterior->siguiente = cursor->siguiente;
 delete cursor;
 cursor = NULL;
 ```
-![[Pasted image 20241217214431.png]]
+![](img/Pasted%20image%2020241217214431.png)
 1.
 - **`TipoPuntNodo`** es un alias para `TipoNodo *`, es decir, un puntero a un nodo de tipo `TipoNodo`.
 - `cursor` apunta al **nodo que queremos eliminar**.
@@ -2638,7 +2638,7 @@ Tal como se ha dicho antes en este tema, el paso por valor de un puntero equival
 Si un puntero es análogo a un vector, entonces un vector de punteros es análogo a una matriz, es decir, a un vector de vectores.
 Para que la analogía sea total es necesario crear dinámicamente cada fila de la matriz a partir de cada elemento del vector de punteros.
 La figura muestra la diferencia entre una matriz propiamente dicha, es decir, un vector de filas, y su estructura análoga en forma de vector de punteros a filas. En ambos casos un elemento se designa como`` matriz[fila][columna]`` pero la organización de los datos en memoria es claramente diferente.
-![[Pasted image 20241217223701.png]]
+![](img/Pasted%20image%2020241217223701.png)
 De hecho la segunda alternativa no exige que todas las filas tengan el mismo tamaño.
 
 # Tema 14 Tipos abstractos de datos
@@ -2662,7 +2662,7 @@ Hasta ahora se ha visto que los tipos registro permiten definir estructuras con 
 - Los campos de datos sirven para almacenar el contenido de información del dato abstracto. 
 - Los subprogramas permiten definir operaciones sobre esos datos.
 - La posibilidad de declarar ciertos elementos como privados permite dar detalles de implementación, y dejar visible sólo la interfaz del abstracto.
- ![[Pasted image 20241218001425.png]]
+![](img/Pasted%20image%2020241218001425.png)
 **INTERFAZ DEL TIPO ABSTRACTO PUNTO
 ```
  typedef struct TipoPunto {
@@ -2804,7 +2804,7 @@ La independencia entre la realización de un módulo y el programa que lo usa se
 - Compilación separada: El programa está formado por varios ficheros fuente, cada uno de los cuales se compila por separado. 
 - Compilación segura: Al compilar un fichero fuente el compilador comprueba que el uso de elementos de otros módulos es consistente con la interfaz. 
 - Ocultación: Al compilar un fichero fuente el compilador no usa información de los detalles de realización de los elementos de otros módulos.
-![[Pasted image 20241218184026.png]]
+![](img/Pasted%20image%2020241218184026.png)
 Entre las técnicas empleadas por lenguajes de programación en lo que respecta a compilación separada, tenemos situaciones tales como las siguientes:
 1. El fichero del programa y del módulo se tratan de forma totalmente separada, sin visibilidad de la interfaz (lenguaje FORTRAN y las primeras versiones del lenguaje C). (NO HAY COMPILACIÓN SEGURA)
 3. La. parte necesaria de la interfaz se copia o importa manualmente en el programa que la usa. La compilación de los ficheros del programa y del módulo se hace con total independencia (lenguaje e ANSI con prototipos, C++, y algunas versiones del lenguaje Pascal, con la directiva EXTERN o USE). (SEGURIDAD MAYOR, CON POSIBILIDAD DE ERRORES)
@@ -2815,7 +2815,7 @@ El lenguaje C± está basado en C++ y comparte sus características en cuanto a 
 ### 15.1.3 Descomposición modular
 La posibilidad de compilar módulos de forma separada permite repartir el trabajo de desarrollo de un programa, a base de realizar su descomposición modular.
 La descomposición modular de UI1 programa puede reflejarse en un diagrama de estructura.
-![[Pasted image 20241218184835.png]]
+![](img/Pasted%20image%2020241218184835.png)
 Las líneas que indican relaciones de uso pueden llevar punta de Hecha si es necesario indicar expresamente cuál es el sentido de la relación. Normalmente no es necesario, pues, como en este caso, un módulo que usa otro se dibuja encima de él, de manera que las líneas de uso se interpretan siempre de arriba a abajo, estableciendo al mismo tiempo una jerarquía entre módulos.
 
 Para que la descomposición en módulos sea adecuada, conviene que los módulos resulten tan independientes linos de otros como sea posible. Esta independencia se analiza según dos criterios, denominados *acoplamiento* y *cohesión*.
@@ -2830,7 +2830,7 @@ Un programa descompuesto en módulos se escribe como un conjunto de ficheros fue
 ### 15.2.1 Proceso de compilación simple
 Un fichero fuente es un fichero de texto que contiene el código de una unidad de compilación, es decir, es posible invocar el compilador dándole como entrada sólo ese fichero fuente.
 ==La compilación de un fichero fuente produce un fichero objeto que contiene la traducción del código C± a instrucciones de máquina. Por convenio, los ficheros fuente en C± tienen la extensión **.cpp** (la misma usada habitualmente en C++) y los ficheros objeto la extensión **.o** ==. Como regla de disciplina modular en C± se exige que el nombre del fichero objeto sea el mismo que el del fichero fuente.
-![[Pasted image 20241218185756.png]]
+![](img/Pasted%20image%2020241218185756.png)
 En general un fichero objeto no se puede ejecutar directamente. Se necesita un paso adicional de montaje para obtener un programa o fichero ejecutable. ==En MS-Windows los ficheros ejecutables tienen la extensión **.exe** (en UNIX/ Linux no suelen tener extensión).== Si el programa ejecutable se ha generado a partir de un solo fichero fuente, debe tener también el mismo nombre.
 ==En C y C++ es frecuente que el montador y el compilador sean una misma herramienta, o al menos que se invoquen como si lo fueran. En casos sencillos como éste es posible realizar la compilación y montaje como una sola operación.==
 
@@ -2969,14 +2969,14 @@ Los ficheros fuente de los tipos mencionados pueden ser considerados unidades de
 - El fichero de implementación de un módulo: *modulo*. cpp
 En realidad a la hora de preparar una aplicación sólo se mandan compilar realmente los ficheros con extensión . cpp, que son los que generan código objeto. Los fichero de interfaz con extensión . h no se mandan compilar por sí mismos ya que en principio no generan código objeto.
 Lo que ocurre es que los ficheros de interfaz son parte efectiva de la compilación de los ficheros de implementación. El significado de la directiva #include es equivalente a copiar en ese punto el contenido del fichero fuente indicado. Esta copia o inclusión se hace sobre la marcha durante la compilación, en una fase inicial de la misma denominada *preproceso*.
-![[Pasted image 20241218203330.png]]
+![](img/Pasted%20image%2020241218203330.png)
 Finalmente se enumeran aquí las reglas de sintaxis correspondientes a la estructura general de cada. una de las unidades de compilación mencionadas:
-![[Pasted image 20241218203415.png]]
-![[Pasted image 20241218203432.png]]
+![](img/Pasted%20image%2020241218203415.png)
+![](img/Pasted%20image%2020241218203432.png)
 
 ### 15.2.8 Compilación de programas modulares. Proyectos
 El proceso de compilación y montaje de un programa cuyo código fuente está repartido entre varios módulos requiere una cadena de operaciones:
-![[Pasted image 20241218203607.png]]
+![](img/Pasted%20image%2020241218203607.png)
 ==La generación del programa ejecutable final exige:== 
 1. ==Compilar los módulos uno a uno, generando el correspondiente fichero objeto ( .a) a partir del fuente (. cpp). Cada compilación individual usa también los ficheros de interfaz (. h) mencionados en las directivas #include del módulo. ==
 2. ==Montar el programa ejecutable combinando todos los ficheros objeto de los módulos.==

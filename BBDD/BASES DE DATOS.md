@@ -166,7 +166,7 @@ El conjunto de todas las entidades del mismo tipo y el conjunto de todas las rel
 La estructura lógica general de la base de datos se puede expresar gráficamente mediante un diagrama entidad-relación (E-R). Una de las formas más populares de dibujar este tipo de diagramas es utilizar el **lenguaje de modelado unificado** (UML: unified modeling language).
 - Las entidades se representan mediante un rectángulo con el nombre de la entidad en la cabecera y la lista de atributos debajo. 
 - Las relaciones se representan mediante un rombo que conecta un par de entidades. El nombre de la relación se pone dentro del rombo.
-![[Pasted image 20250226135236.png]]
+![](img/Pasted%20image%2020250226135236.png)
 
 ### 1.6.4. Normalización
 La normalización es un método de diseño de bases de datos. El objetivo es generar un conjunto de esquemas de relaciones que permita almacenar información sin redundancias innecesarias, pero que también permita recuperar la información con facilidad.
@@ -228,13 +228,13 @@ Los sistemas de bases de datos pueden estar:
 - Distribuidas: se extienden por varias máquinas geográficamente separadas. En una arquitectura de dos capas.
 Clasificación por número de capas: 
 - Dos capas: La aplicación se divide en un componente que reside en la máquina cliente, que invoca la funcionalidad del sistema de bases de datos en la máquina servidora mediante instrucciones del lenguaje de consultas
-![[Pasted image 20250226142835.png]]
+![](img/Pasted%20image%2020250226142835.png)
 - Tres capas:
 	La máquina cliente actúa simplemente como una parte visible al usuario y no alberga llamadas directas a la base de datos.
 	El extremo cliente se comunica con un servidor de aplicaciones, generalmente mediante una interfaz de formularios 
 	El servidor de aplicaciones, a su vez, se comunica con el sistema de bases de datos para tener acceso a los datos 
 	Las aplicaciones de tres capas resultan más adecuadas para aplicaciones de gran tamaño y para las aplicaciones que se ejecutan en la World Wide Web.
-![[Pasted image 20250226142904.png]]
+![](img/Pasted%20image%2020250226142904.png)
 
 ## 1.10. Minería y análisis de datos
 **Proceso de análisis semiautomático de grandes bases de datos para descubrir patrones útiles.** Al igual que el descubrimiento de conocimientos en la inteligencia artificial (también denominado aprendizaje de la máquina) o el análisis estadístico, la minería de datos intenta descubrir reglas y patrones en los datos. Sin embargo, la minería de datos se diferencia del aprendizaje de la máquina y de la estadística en que maneja grandes volúmenes de datos, almacenados principalmente en disco.
@@ -294,7 +294,7 @@ En el modelo relacional:
 - Relación → Tabla (tiene un nombre) 
 - Tupla → Fila
 - Atributo → Columna (tiene un nombre)
-![[Pasted image 20250226212957.png]]
+![](img/Pasted%20image%2020250226212957.png)
 Se utiliza el término **ejemplar de relación** para referirse a una instancia específica de una relación, es decir, qué contiene un determinado conjunto de filas. 
 El orden en que las tuplas aparecen en una relación es irrelevante, ya que la relación es un conjunto de tuplas.
 Para cada atributo de una relación existe un conjunto de valores permitidos, llamado **dominio** del atributo.
@@ -343,11 +343,11 @@ Ejemplo superclaves:
 **Clave candidata:** Superclave para la que no hay subconjunto de atributos que también sea superclave. No es única, es posible que varios conjuntos de atributos puedan ser claves candidatas.
 **Clave primaria:** De entre todas las claves candidata, es la clave candidata elegida por el diseñador de la base de datos como medio principal para la identificación de las tuplas de una relación La clave primaria debe escogerse de manera que los valores de sus atributos no se modifiquen nunca, o muy rara vez.
 Los atributos de clave primaria de un esquema de relación se indican antes que el resto de los atributos y subrayados.
-![[Pasted image 20250227164945.png]]
+![](img/Pasted%20image%2020250227164945.png)
 
 **Clave externa**: El esquema de una relación puede incluir entre sus atributos la clave primaria de otra relación
-![[Pasted image 20250227165259.png]]
-![[Pasted image 20250227165327.png]]
+![](img/Pasted%20image%2020250227165259.png)
+![](img/Pasted%20image%2020250227165327.png)
 **Restricción de integridad referencial:** Requiere que los valores que aparecen en determinados atributos de una tupla en la relación referenciante también aparezcan en otros atributos de al menos una tupla de la relación referenciada.
 	Si en una tupla de profesor se menciona un *nombre_dept*, se requiere que exista una tupla en departamento con ese *nombre_dept*
 
@@ -357,7 +357,7 @@ El esquema de la base de datos, junto con las dependencias de claves primaria y 
 - Los atributos que son clave primaria se muestran subrayados. 
 - Las dependencias de clave externa aparecen como flechas desde los atributos de clave externa de la relación referenciante a la clave primaria de la relación referenciada 
 - Las restricciones distintas de las restricciones de clave externa, no se muestran explícitamente en los diagramas de esquema. 
-- Otros diagramas como el de entidad- relación permiten representar distintos tipos de restricciones ![[Pasted image 20250227165840.png]]
+- Otros diagramas como el de entidad- relación permiten representar distintos tipos de restricciones ![](img/Pasted%20image%2020250227165840.png)
 
 ## 2.5. Lenguajes de consulta relacional
 **Lenguaje en el que los usuarios solicitan información de la base de datos.** Estos lenguajes suelen ser de un nivel superior al de los lenguajes de programación habituales.
@@ -383,10 +383,10 @@ Consiste en seleccionar ciertos atributos de una relación, dando como resultado
 Permite combinar dos relaciones mezclando pares de tuplas, una de cada relación, en una única tupla 
 - **Reunión natural:** hace casar las tuplas cuyos valores coinciden para los atributos que son comunes a ambas relaciones 
 - **Producto cartesiano:** combina todos los pares de tuplas de las dos relaciones.
-![[Pasted image 20250227170803.png]]
+![](img/Pasted%20image%2020250227170803.png)
 
 Como las relaciones son conjuntos también se usan las aperaciones:
-![[Pasted image 20250227170904.png]]
+![](img/Pasted%20image%2020250227170904.png)
 Tuplas duplicadas: El resultado de una consulta puede contener tuplas duplicadas (desde el punto de vista matemático deberían eliminarse). Existen lenguajes que las eliminan y otros que no (para no sobrecargar el procesamiento con la eliminación).
 
 ### ALGEBRA RELACIONAL

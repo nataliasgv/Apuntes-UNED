@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9e0fa687c9282f41",
+            "id": "8d5cfdd2a48cc123",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IC3/Apuntes IC3.md",
+                "file": "BBDD/BASES DE DATOS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Apuntes IC3"
+              "title": "BASES DE DATOS"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IC3/Apuntes IC3.md",
+                "file": "BBDD/BASES DE DATOS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Apuntes IC3"
+              "title": "Outline of BASES DE DATOS"
             }
           }
         ],
@@ -170,14 +170,27 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "9f9bc6826ebc19ba",
+  "active": "8d5cfdd2a48cc123",
   "lastOpenFiles": [
-    "IC3/Pasted image 20250310132309.png",
     "FP/Fundamentos de programación en C+-.md",
+    "img/Pasted.md",
+    "FP/img/Pasted image 20241203154602.png",
+    "img",
+    "BBDD/BASES DE DATOS.md",
+    "BBDD/img/Pasted image 20250227170904.png",
+    "BBDD/img/Pasted image 20250303162050.png",
+    "FP/backup.md",
+    "FP/img/Pasted image 20241203155232.png",
+    "BBDD/img",
+    "FP/img/Pasted image 20241203160610.png",
+    "FP/img/Pasted image 20241203160521.png",
+    "FP/img/Pasted image 20241203160306.png",
+    "FP/img/Pasted image 20241129191832.png",
+    "FP/img",
+    "IC3/Apuntes IC3.md",
+    "IC3/Pasted image 20250310132309.png",
     "FP/Memoria.md",
     "IC2/Apuntes PEC IC2.md",
-    "IC3/Apuntes IC3.md",
-    "BBDD/BASES DE DATOS.md",
     "IC3/prueba3/simulación.md",
     "IC3/prueba3/prueba3_entity.vhd.md",
     "IC3/prueba3/prueba3_architecture.vhd.md",
@@ -187,16 +200,7 @@
     "IC3/prueba3/not1.vhd.md",
     "IC3/prueba3",
     "IC3/Prueba3.md",
-    "BBDD/Pasted image 20250226135236.png",
-    "Untitled Diagram.svg",
     "Welcome.md",
-    "BBDD/Pasted image 20250303162050.png",
-    "BBDD/Pasted image 20250227170904.png",
-    "BBDD/Pasted image 20250227170803.png",
-    "BBDD/Pasted image 20250227165840.png",
-    "BBDD/Pasted image 20250227165327.png",
-    "BBDD/Pasted image 20250227165259.png",
-    "BBDD/Pasted image 20250227164945.png",
     "BBDD"
   ]
 }

@@ -23,7 +23,10 @@ Las operaciones del programa serán las siguientes:
 
 El programa se divide en tres módulos, GesRAE, calendario y menu, cada uno de ellos compuesto por una interfaz ".h" y un fichero de implementación ".cpp".
 
-![[Pasted image 20250112070449.png]]
+![]( 
+        $path = $matches[1]
+        $path -replace ' ', '%20'  # Reemplaza los espacios por %20
+     ", "%20")) image 20250112070449.png)
 
 La figura muestra la estructura del programa, indicando las relaciones de dependencia de unos módulos respecto a otros. Las flechas indican que un módulo utiliza directamente elementos de otro.
 
