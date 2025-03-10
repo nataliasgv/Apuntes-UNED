@@ -1,0 +1,49 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "DzDXMgpTKRClBHgl6u5nu",
+      "name": "",
+      "value": "#c6cc6b"
+    },
+    {
+      "id": "3eKkPIMt0F7zp1GBcM8B_",
+      "name": "",
+      "value": "#f6ac36"
+    },
+    {
+      "id": "AqCHLpo3gZ3jRCHbcdADN",
+      "name": "",
+      "value": "#776275"
+    },
+    {
+      "id": "znhnu25PIHHl7QqxFBQ90",
+      "name": "",
+      "value": "#880d00"
+    },
+    {
+      "id": "2awqar4gATFGiwiOxS0FJ",
+      "name": "",
+      "value": "#006955"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "BBDD",
+      "color": "3eKkPIMt0F7zp1GBcM8B_"
+    },
+    {
+      "path": "FP",
+      "color": "AqCHLpo3gZ3jRCHbcdADN"
+    },
+    {
+      "path": "IC3",
+      "color": "2awqar4gATFGiwiOxS0FJ"
+    },
+    {
+      "path": "IC2",
+      "color": "DzDXMgpTKRClBHgl6u5nu"
+    }
+  ]
+}
